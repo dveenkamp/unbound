@@ -1,15 +1,20 @@
 {
-  "name": "dveenkamp/unbound",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@dveenkamp/unbound",
+  "version": "0.1.0",
+  "description": "Composable deferred commands with pluggable interpreters.",
+  "files": ["src"],
   "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
   "scripts": {
     "test": "node --test",
-    "test:watch": "node --test --watch"
+    "test:watch": "node --test --watch",
+    "prepublishOnly": "pnpm test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["commands", "functional", "interpreter", "composition"],
+  "author": "dveenkamp",
   "license": "MIT",
   "packageManager": "pnpm@10.28.2",
   "publishConfig": {
